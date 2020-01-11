@@ -157,7 +157,6 @@ if __name__ == '__main__':
     haberman_accuracy = []
     bcw_accuracy = []
     ######################################鸢尾花(iris)数据集###############################################
-    ##(三个臭皮匠)
     #读取鸢尾花数据集,并指定列名
     iris_names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']  # 指定鸢尾花的属性列名
     #加载鸢尾花数据集
@@ -165,19 +164,16 @@ if __name__ == '__main__':
     #train_model包括了查看数据集的详细信息、可视化数据集以及算法的评估
     iris_accuracy = train_model(iris_names,"鸢尾花",iris_dataset)
     ######################################葡萄酒(wine)数据集###############################################
-    ##(董怡馨)
     # 读取葡萄酒数据集,并指定列名
     wine_names = ['class','Alcohol','Malic acid','Ash','Alcalinity of ash','Magnesium','Total phenols','Flavanoids','Nonflavanoid phenols','Proanthocyanins','Color intensity','Hue','OD280/OD315 of diluted wines','Proline']
     # 加载葡萄酒数据集
     wine_dataset = load_dataset("葡萄酒", "dataset//wine.data", wine_names)
     wine_accuracy = train_model(wine_names, "葡萄酒", wine_dataset)
     ######################################癌症患者生存期(haberman)数据集###############################################
-    ##(唐楚)
     haberman_names = ['age', 'year', 'number', 'class']
     haberman_dataset = load_dataset("癌症患者生存期", "dataset//haberman.data", haberman_names)
     haberman_accuracy = train_model(haberman_names, "癌症患者生存期", haberman_dataset)
     ######################################乳腺癌(breast cancer)数据集#############################################
-    ##(岳心怡)
     bcw_names = ['Sample code number', 'Clump Thickness', 'Uniformity od Cell Size', 'Uniformity of Cell Shape',
                  'Marginal Adhesion', 'Single Epithelial Cell Size', 'Bare Nuclei', 'Bland Chromatin',
                  'Normal Nucleoli', 'Mitoses', 'class']
